@@ -1,164 +1,691 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contacto — NEMATEC | Andorra la Vella</title>
-<meta name="description" content="Contacte con NEMATEC para pedir presupuesto de instalación de climatización, calefacción, fontanería, electricidad o energías renovables en Andorra.">
-<link rel="canonical" href="https://www.nematec-andorra.com/contacto.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+/* ==========================================================================
+   NEMATEC — Sistema de diseño
+   Paleta: grafito/antracita + ámbar señalización (motivo: cuadro eléctrico)
+   Tipografía: Space Grotesk (display) + Inter (texto) + IBM Plex Mono (datos)
+   ========================================================================== */
 
-<header class="site-header">
-  <div class="wrap">
-    <a href="index.html" class="logo">NEMA<span>TEC</span></a>
-    <nav class="nav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="quienes-somos.html">Quiénes somos</a>
-      <div class="has-sub">
-        <a href="servicios.html">Servicios</a>
-        <div class="sub-menu">
-          <a href="servicios/climatizacion.html">Climatización</a>
-<a href="servicios/calefaccion.html">Calefacción</a>
-<a href="servicios/fontaneria.html">Fontanería</a>
-<a href="servicios/electricidad.html">Electricidad</a>
-<a href="servicios/energias-renovables.html">Energías renovables</a>
-        </div>
-      </div>
-      <a href="financiacion.html">Financiación</a>
-      <a href="proyectos.html">Proyectos</a>
-      <a href="marcas.html">Marcas</a>
-      <a href="contacto.html" class="is-active">Contacto</a>
-      <div class="lang-switch">
-        <a href="index.html" class="is-active">ES</a>
-        <a href="#" onclick="return false;">CA</a>
-        <a href="#" onclick="return false;">FR</a>
-        <a href="#" onclick="return false;">EN</a>
-      </div>
-    </nav>
-    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-  </div>
-</header>
+:root {
+  --ink: #14181c;
+  --surface: #1b2127;
+  --surface-2: #232a31;
+  --line: #333c44;
+  --paper: #f2efe9;
+  --paper-dim: #c9c4ba;
+  --muted: #8b939b;
+  --amber: #f5a623;
+  --amber-dim: #a86e13;
+  --teal: #2bb3a3;
+  --danger: #e0533d;
 
-<main>
+  --font-display: "Space Grotesk", "Arial Narrow", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
 
-  <section class="page-header">
-    <div class="wrap">
-      <p class="eyebrow">Contacto</p>
-      <h1>¿Necesita que le contactemos?</h1>
-      <p style="margin-top:16px; max-width:70ch;">Rellene el formulario o escríbanos directamente. Le responderemos en horario comercial.</p>
-      <div class="breadcrumb"><a href="index.html">Inicio</a> / Contacto</div>
-    </div>
-  </section>
-  <section class="section" style="border-bottom:none;">
-    <div class="wrap contact-grid">
-      <div class="contact-info">
-        <dl>
-          <dt>Dirección</dt>
-          <dd>Carrer Esteve Dolsa Pujal, 40, AD500 Andorra la Vella</dd>
-          <dt>Teléfono</dt>
-          <dd><a href="tel:+376770707">(+376) 77 07 07</a></dd>
-          <dt>Email</dt>
-          <dd><a href="mailto:info@nemagrup.com">info@nemagrup.com</a></dd>
-          <dt>Horario</dt>
-          <dd>Lun&ndash;vie, 8:00&ndash;13:00 y 15:00&ndash;18:00</dd>
-        </dl>
-        <div class="contact-social">
-          <a href="https://www.facebook.com/profile.php?id=61566970050424" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://www.linkedin.com/company/nemagrup/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.instagram.com/nema_grup/" target="_blank" rel="noopener">Instagram</a>
-        </div>
-      </div>
-      <form class="form" action="#" method="post">
-        <div class="form-row">
-          <div class="field">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
-          </div>
-          <div class="field">
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" required>
-          </div>
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="field">
-          <label for="servicio">Servicio de interés</label>
-          <select id="servicio" name="servicio">
-            <option>Climatización</option>
-            <option>Calefacción</option>
-            <option>Fontanería</option>
-            <option>Electricidad</option>
-            <option>Energías renovables</option>
-            <option>Otro / no lo sé</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
-        </div>
-        <div class="field field--check">
-          <input type="checkbox" id="privacidad" name="privacidad" required>
-          <label for="privacidad">He leído y acepto la <a href="#">política de privacidad</a>.</label>
-        </div>
-        <button type="submit" class="btn btn--solid" style="align-self:flex-start;">Enviar solicitud</button>
-      </form>
-    </div>
-  </section>
+  --radius: 2px;
+  --container: 1180px;
+}
 
-</main>
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <a href="index.html" class="logo">NEMA<span>TEC</span></a>
-        <p style="margin-top:14px; font-size:14px;">Empresa instaladora especializada en climatización, calefacción, fontanería, electricidad y energías renovables en Andorra.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Servicios</h4>
-        <ul>
-          <li><a href="servicios/climatizacion.html">Climatización</a></li>
-          <li><a href="servicios/calefaccion.html">Calefacción</a></li>
-          <li><a href="servicios/fontaneria.html">Fontanería</a></li>
-          <li><a href="servicios/electricidad.html">Electricidad</a></li>
-          <li><a href="servicios/energias-renovables.html">Energías renovables</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Empresa</h4>
-        <ul>
-          <li><a href="quienes-somos.html">Quiénes somos</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="marcas.html">Marcas</a></li>
-          <li><a href="financiacion.html">Financiación</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contacto</h4>
-        <ul>
-          <li>Carrer Esteve Dolsa Pujal, 40, AD500 Andorra la Vella</li>
-          <li><a href="tel:+376770707">(+376) 77 07 07</a></li>
-          <li><a href="mailto:info@nemagrup.com">info@nemagrup.com</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 NEMATEC. Todos los derechos reservados.</span>
-      <span><a href="#">Aviso legal</a> · <a href="#">Política de privacidad</a></span>
-    </div>
-  </div>
-</footer>
+html { scroll-behavior: smooth; }
 
-<a class="whatsapp-fab" href="https://wa.me/376770707" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="#0a0a0a"><path d="M17.6 6.3A8 8 0 0 0 4.2 15.9L3 21l5.2-1.4a8 8 0 0 0 12-6.9 8 8 0 0 0-2.6-6.4zM12 19a6.6 6.6 0 0 1-3.4-.9l-.2-.1-2.5.6.7-2.4-.2-.3A6.6 6.6 0 1 1 18.6 12 6.6 6.6 0 0 1 12 19zm3.6-4.9c-.2-.1-1.2-.6-1.3-.6s-.3-.1-.4.1-.5.6-.6.7-.2.1-.4.1a5.4 5.4 0 0 1-1.6-1 6 6 0 0 1-1.1-1.4c-.1-.2 0-.3.1-.4l.3-.3c.1-.1.1-.2.2-.3a.4.4 0 0 0 0-.4c0-.1-.4-1-.6-1.3s-.3-.3-.4-.3h-.4a.7.7 0 0 0-.5.2 2.2 2.2 0 0 0-.7 1.6 3.8 3.8 0 0 0 .8 2 8.7 8.7 0 0 0 3.3 2.9c.5.2.8.3 1.1.4a2.7 2.7 0 0 0 1.2.1 2 2 0 0 0 1.3-.9 1.6 1.6 0 0 0 .1-.9c-.1 0-.2-.1-.4-.2z"/></svg>
-</a>
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
 
-<script src="js/main.js"></script>
-</body>
-</html>
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: var(--amber);
+  display: inline-block;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 700; }
+h2 { font-size: clamp(1.7rem, 3.2vw, 2.6rem); }
+h3 { font-size: 1.25rem; }
+
+p { color: var(--paper-dim); max-width: 60ch; }
+
+.section {
+  padding: 96px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section--tight { padding: 64px 0; }
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+
+.section-head p { margin-top: 14px; }
+
+/* ---- Botones ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  border: 1px solid var(--amber);
+  border-radius: var(--radius);
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn--solid {
+  background: var(--amber);
+  color: var(--ink);
+}
+.btn--solid:hover { background: #ffc054; }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--paper);
+  border-color: var(--line);
+}
+.btn--ghost:hover { border-color: var(--amber); color: var(--amber); }
+
+/* ---- Header ---- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(20, 24, 28, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.logo span {
+  color: var(--amber);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav a {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  color: var(--paper-dim);
+  position: relative;
+}
+.nav a:hover, .nav a.is-active { color: var(--paper); }
+
+.nav .has-sub { position: relative; }
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 8px;
+  display: none;
+  flex-direction: column;
+}
+.has-sub:hover .sub-menu,
+.has-sub:focus-within .sub-menu { display: flex; }
+.sub-menu a { padding: 10px 12px; text-transform: none; letter-spacing: 0; font-size: 14px; }
+.sub-menu a:hover { background: var(--surface-2); color: var(--amber); }
+
+.lang-switch { display: flex; gap: 4px; font-family: var(--font-mono); font-size: 12px; }
+.lang-switch a { padding: 6px 8px; color: var(--muted); }
+.lang-switch a.is-active { color: var(--amber); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--paper);
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- Hero (motivo: cuadro eléctrico) ---- */
+.hero {
+  padding: 88px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero__contact-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 36px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+.hero__contact-strip strong { color: var(--paper); font-weight: 500; }
+
+.hero__cta {
+  display: flex;
+  gap: 14px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* Panel de disyuntores ilustrado con CSS */
+.breaker-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 20px;
+}
+.breaker-panel__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px dashed var(--line);
+}
+.breaker-panel__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.breaker {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.breaker__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+.breaker__switch {
+  width: 30px;
+  height: 16px;
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  position: relative;
+}
+.breaker__switch::after {
+  content: "";
+  position: absolute;
+  top: 2px; right: 2px;
+  width: 10px; height: 10px;
+  background: var(--amber);
+  border-radius: 1px;
+  animation: blink 2.6s infinite steps(2, jump-none);
+}
+.breaker:nth-child(2) .breaker__switch::after { animation-delay: 0.4s; }
+.breaker:nth-child(3) .breaker__switch::after { animation-delay: 0.8s; }
+.breaker:nth-child(4) .breaker__switch::after { animation-delay: 1.2s; }
+.breaker:nth-child(5) .breaker__switch::after { animation-delay: 1.6s; }
+@keyframes blink {
+  0%, 40% { opacity: 1; }
+  50%, 90% { opacity: 0.25; }
+  100% { opacity: 1; }
+}
+.breaker__name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--paper);
+}
+.breaker__status {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--teal);
+  letter-spacing: 0.06em;
+}
+
+/* ---- Pilares / quienes somos ---- */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 40px;
+}
+.pillar {
+  background: var(--ink);
+  padding: 24px 18px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--paper-dim);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pillar__num { color: var(--amber); font-size: 12px; }
+
+/* ---- Paneles de imagen genérica (ilustraciones SVG) ---- */
+.photo-panel {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(120% 120% at 20% 15%, var(--surface-2), var(--ink) 70%);
+}
+.photo-panel svg { width: 46%; height: 46%; }
+.photo-panel::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.photo-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.25;
+}
+.photo-panel--amber svg { stroke: var(--amber); }
+.photo-panel--teal svg { stroke: var(--teal); }
+.photo-panel--sm { aspect-ratio: 16 / 10; }
+.photo-panel--sm svg { width: 34%; height: 34%; }
+
+.service-card .photo-panel { margin: -32px -28px 4px; width: calc(100% + 56px); border-left: none; border-right: none; border-top: none; }
+
+/* ---- Servicios ---- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.service-card {
+  background: var(--ink);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 260px;
+  transition: background 0.15s ease;
+}
+.service-card:hover { background: var(--surface); }
+.service-card__code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--amber);
+  letter-spacing: 0.08em;
+}
+.service-card h3 { margin-top: 4px; }
+.service-card p { font-size: 14px; margin: 0; flex-grow: 1; }
+.service-card__link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--paper);
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.service-card:hover .service-card__link { color: var(--amber); }
+
+/* ---- Marcas ---- */
+.brands-marquee {
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0;
+}
+.brands-track {
+  display: flex;
+  gap: 48px;
+  width: max-content;
+  animation: scroll-left 34s linear infinite;
+  align-items: center;
+}
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.brand-chip {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.brands-note {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+
+/* ---- Proyectos ---- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.project-card {
+  border: 1px solid var(--line);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.project-card__meta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ---- Financiación ---- */
+.finance-box {
+  border: 1px solid var(--amber-dim);
+  background: linear-gradient(135deg, rgba(245, 166, 35, 0.08), transparent 60%);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: center;
+}
+.finance-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--paper-dim);
+}
+.finance-list li::before { content: "→ "; color: var(--amber); }
+
+/* ---- Contacto ---- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+}
+.contact-info dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  margin-top: 24px;
+}
+.contact-info dt { color: var(--muted); text-transform: uppercase; font-size: 11px; letter-spacing: 0.08em; align-self: center; }
+.contact-info dd { color: var(--paper); }
+.contact-social { display: flex; gap: 14px; margin-top: 28px; }
+.contact-social a {
+  border: 1px solid var(--line);
+  padding: 10px 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.contact-social a:hover { border-color: var(--amber); color: var(--amber); }
+
+.form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.field input, .field textarea, .field select {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--paper);
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+.field input:focus, .field textarea:focus, .field select:focus {
+  border-color: var(--amber);
+  outline: none;
+}
+.field--check { flex-direction: row; align-items: flex-start; gap: 10px; }
+.field--check label { text-transform: none; letter-spacing: 0; font-size: 13px; color: var(--paper-dim); }
+.field--check a { color: var(--amber); }
+
+/* ---- Footer ---- */
+.site-footer {
+  padding: 64px 0 32px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--line);
+}
+.footer-col h4 {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col a { color: var(--paper-dim); font-size: 14px; }
+.footer-col a:hover { color: var(--amber); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---- WhatsApp flotante ---- */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  background: #25d366;
+  color: #0a0a0a;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.whatsapp-fab svg { width: 26px; height: 26px; }
+
+/* ---- Page header (subpáginas) ---- */
+.page-header {
+  padding: 140px 0 56px;
+  border-bottom: 1px solid var(--line);
+}
+.page-header .eyebrow { margin-bottom: 18px; }
+.breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 20px;
+}
+.breadcrumb a { color: var(--muted); }
+.breadcrumb a:hover { color: var(--amber); }
+
+.spec-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 32px;
+  margin-top: 32px;
+}
+.spec-list li {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--paper-dim);
+  padding-left: 20px;
+  position: relative;
+}
+.spec-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 8px;
+  width: 8px; height: 8px;
+  background: var(--amber);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.badge-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+.badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 1px solid var(--line);
+  padding: 6px 12px;
+  color: var(--muted);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .hero__grid, .two-col, .contact-grid { grid-template-columns: 1fr; }
+  .pillars { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .finance-box { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .spec-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .nav { display: none; }
+  .nav-toggle { display: flex; }
+  .site-header.is-open .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 76px;
+    left: 0; right: 0;
+    background: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding: 12px;
+  }
+  .site-header.is-open .sub-menu { position: static; display: flex; border: none; padding-left: 12px; }
+  .lang-switch { margin-top: 12px; }
+  .pillars { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .page-header { padding-top: 120px; }
+}
